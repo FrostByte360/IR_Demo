@@ -22,6 +22,8 @@ int ir_inputval = 0;
 
 void setup()  {
   pinMode(ir_pin, INPUT);
+
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -30,7 +32,7 @@ void loop() {
   if (!ir_inputval)  {
     ir_counter++;
 
-    Serial.printf("Objects Detected: %d\n", ir_cnt);
+    Serial.printf("Objects Detected: %d\n", ir_counter);
     delay(500);
   }
 }
